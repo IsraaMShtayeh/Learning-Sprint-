@@ -35,5 +35,5 @@ In this challenge, you will enhance your JavaScript skills and knowledge. Each d
 - Celebrate your achievements and reflect on your growth throughout the challenge.
 
 ## Folder Structure
--  [**Day 1**](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/edit/main/README.md/Day1.md)
+-  [**Day 1**](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/edit/main/Day1.md)
 
