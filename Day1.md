@@ -50,22 +50,19 @@ document.getElementById("name").append ="Shtayeh";  // <p id="name">Israa Shtaye
 
 ## Coding Exercises
 
-### [Factorialize a Number](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/factorialize-a-number)
+### [Compound Assignment With Augmented Multiplication](freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication)
 
 #### My Solution
 
 
 ```javascript
-// Example 1: Variable Hoisting
-console.log(x); // Output: undefined
-var x = 10;
-console.log(x); // Output: 10
+// Example 1:
+let a = 5;
+let b = 12;
+let c = 4.6;
+a *= 5;
+b  *= 3;
+c *= 10;
 
-// Example 2: Function Hoisting
-hoistedFunction(); // Output: "Hello, World!"
-
-function hoistedFunction() {
-  console.log("Hello, World!");
-}
 
 ```
