@@ -26,12 +26,17 @@ In this lesson, we explored Values & Data Types , Operators , Expressions in Jav
   ===  checks whether the two given operands have the same value and type or not.
   
 - The Difference between Expressions and Statement
+  
   Statement:action we want javascript to take (eg for loop , conditional ...)
+  
   Expression: ask javascript for particular value (anything that executes and ends up being a value).
   
 - we can  declare a JavaScript variable with the var , the const or the let keyword
+ 
   let and const : are Block Scope {} , cannot be Redeclared
+  
   const : cannot be  Reassigned (unchangable variable)
+  
   var :  can be Redeclared and Reassigned.
   
 -  Variable names (Camel Case such as validVariable) can contain letters, digits but cannot start with a digit 0-9.
