@@ -18,7 +18,7 @@ In this lesson, we explored Introduction in JavaScript and the DOM . Here are th
 // Example 1:Finding Elements in a web page 
 
 1- Get the element with the specified id=x:
- const element =document.getElementById("x")   or document.querySelector("#x")        
+ const element = document.getElementById("x")   or document.querySelector("#x")        
 2- Get all elements with class="y":
 const collection =  document.getElementByClassName("y")  or document.querySelectorAll(".y")   
 3- Get all elements with the tag name "p":
@@ -56,13 +56,30 @@ document.getElementById("name").append ="Shtayeh";  // <p id="name">Israa Shtaye
 
 
 ```javascript
-// Example 1:
 let a = 5;
 let b = 12;
 let c = 4.6;
 a *= 5;
 b  *= 3;
 c *= 10;
+```
 
+
+### [Concatenating Strings with the Plus Equals Operator]([freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/concatenating-strings-with-the-plus-equals-operator)https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/concatenating-strings-with-the-plus-equals-operator)
+
+#### My Solution
+
+
+```javascript
+let myStr="This is the first sentence.";
+myStr +=" This is the second sentence.";
+```
+
+### [Use Bracket Notation to Find the Nth-to-Last Character in a String]([freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-nth-to-last-character-in-a-string)https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-nth-to-last-character-in-a-string)
+
+#### My Solution
+
+const lastName = "Lovelace";
+const secondToLastLetterOfLastName = lastName[lastName.length - 2]; 
 
 ```
