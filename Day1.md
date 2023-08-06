@@ -79,6 +79,7 @@ myStr +=" This is the second sentence.";
 
 #### My Solution
 
+```javascript
 const lastName = "Lovelace";
 const secondToLastLetterOfLastName = lastName[lastName.length - 2]; 
 
