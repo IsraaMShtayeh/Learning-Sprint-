@@ -1,31 +1,50 @@
 
-# Day 1: Hoisting
+# Day 1: Values & Data Types , Operators , Expressions 
 
-This README file summarizes the JavaScript lesson on hoisting. Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their scope during the compilation phase.
 
 ## Lesson Summary
 
-In this lesson, we explored hoisting in JavaScript. Here are the key points covered:
+In this lesson, we explored Values & Data Types , Operators , Expressions in JavaScript. Here are the key points covered:
 
-- Hoisting is the process of moving variable and function declarations to the top of their scope.
-- Variable declarations are hoisted but not their assignments. They are accessible but have an initial value of `undefined`.
-- Function declarations are also hoisted, allowing them to be called before they are defined.
-- Hoisting does not apply to function expressions, arrow functions, or variables declared with `let` or `const`.
+- In JavaScript there are two types
+  of data types primitive data types
+  (null,undefined,numbers (decimal,positive,negative,infinity...),string,boolean(false or true ))
+   or Object such as document.
+    
+- typeof is a javaScript operator that return the type of the operand in form string.
+  
+- A string in JavaScript stores a series of characters (The first character is in index = 0).
+  
+- There is many built in string methode such as
+   indexof(character), includes(string or character) , toLowerCase() , startWith(string or character) etc.
+  
+- A string can be any text inside double or single quotes.
+  
+- There is different type of operator in JavaScript Arithmatic Operator (+ - * / ..),comparison operator (> >= < <= == === != !=== ...) ...
+- The Difference between == ,!=  (loosy-goosey ) and === ,!== (strict)
+  == checks whether the two given operands have the same value or not. (doing extra steps casting )
+  ===  checks whether the two given operands have the same value and type or not.
+  
+- The Difference between Expressions and Statement
+  Statement:action we want javascript to take (eg for loop , conditional ...)
+  Expression: ask javascript for particular value (anything that executes and ends up being a value).
+  
+- we can  declare a JavaScript variable with the var , the const or the let keyword
+  let and const : are Block Scope {} , cannot be Redeclared
+  const : cannot be  Reassigned (unchangable variable)
+  var :  can be Redeclared and Reassigned.
+  
+-  Variable names (Camel Case such as validVariable) can contain letters, digits but cannot start with a digit 0-9.
+  
+  
+
 
 ## Coding Examples
 
 ```javascript
-// Example 1: Variable Hoisting
-console.log(x); // Output: undefined
-var x = 10;
-console.log(x); // Output: 10
+// Example 1: 
 
-// Example 2: Function Hoisting
-hoistedFunction(); // Output: "Hello, World!"
-
-function hoistedFunction() {
-  console.log("Hello, World!");
-}
+// Example 2: 
 
 ```
 
@@ -38,16 +57,6 @@ function hoistedFunction() {
 
 
 ```javascript
-// Example 1: Variable Hoisting
-console.log(x); // Output: undefined
-var x = 10;
-console.log(x); // Output: 10
 
-// Example 2: Function Hoisting
-hoistedFunction(); // Output: "Hello, World!"
-
-function hoistedFunction() {
-  console.log("Hello, World!");
-}
 
 ```
