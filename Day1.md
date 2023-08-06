@@ -103,8 +103,8 @@ c *= 10;
 let myStr="This is the first sentence.";
 myStr +=" This is the second sentence.";
 ```
-
 ### [Use Bracket Notation to Find the Nth-to-Last Character in a String](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-nth-to-last-character-in-a-string)
+
 
 #### My Solution
 
