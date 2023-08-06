@@ -56,7 +56,7 @@ In this lesson, we explored Values & Data Types , Operators , Expressions in Jav
 
 ## Coding Exercises
 
-### [Factorialize a Number](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/factorialize-a-number)
+
 
 #### My Solution
 
