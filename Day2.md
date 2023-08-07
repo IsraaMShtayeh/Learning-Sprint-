@@ -77,8 +77,6 @@ let num2=100;
 console.log(num1==num2);//true
 console.log(num1===num2);//false
 ```
-
-
 ## Coding Exercises
 
 ### [Learning sprint (1), week (3), day (2) delieverables](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week1%20-%20javascript-from-first-steps-to-professional/day%202/tasks.md)
@@ -97,9 +95,12 @@ console.log(b === c);
 console.log(!!d);
 ```
 Solution:
+
 true // a and b have the same value (type-conversion done by == operator )
+
 false // b and c have the same value but different type 
-true //!!"string":  1-!"string"=true 2-!true=false
+
+true //!!"string":    !"string"=true     !true=false
 
 QUESTION #2
 ```javascript
@@ -107,7 +108,9 @@ console.log(4 + 5 * "7");
 ```
 Solution:
 39
+
 multiplication is done first so convert "7" to number 5*7=35 then 35+4=39
+
 Note : 4 + 5 + "7" in this case the result is 97 the second plus does concatenation operations.
 
 
@@ -117,7 +120,9 @@ let result = 5 + 2 * 3 - 1;
 ```
 Solution:
 10
+
 multiplication is done first so 2*3=6 The precedence for (+) and (-) is the same so are computed from left to right:
+
 5+6-1=11-1=10
 
 
@@ -131,6 +136,7 @@ console.log(x === y);
 ```
 Solution:
 true ( x and y have the same value regardless the type )
+
 false ( x and y have the same value but different type)
 
 QUESTION #5
@@ -141,12 +147,19 @@ let result = (num > 10 && isPositive) || num < 0;
 console.log(result);
 ```
 Solution:
+
 true 
-1- num>10 true convert string "15" to number 15  15>10 
+
+num>10 true convert string "15" to number 15  15>10 
+
 &&
+
 isPositive=true 
+
 so true && true = true 
+
 ||
+
  Logical operators in JavaScript is that they evaluate from left to right, and they short-circuit.
  so in this case : an OR expression, if the first operand is true, JavaScript with short-circuit and not even look at the second operand.
 
