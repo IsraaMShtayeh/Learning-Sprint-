@@ -100,7 +100,14 @@ true // a and b have the same value (type-conversion done by == operator )
 
 false // b and c have the same value but different type 
 
-true //!!"string":    !"string"=true     !true=false
+true 
+
+!!"string": 
+
+!"string"=true 
+
+second : !true=false
+
 
 QUESTION #2
 ```javascript
