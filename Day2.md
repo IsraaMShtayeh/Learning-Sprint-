@@ -16,13 +16,15 @@ In this lesson, we explored Values & Data Types , Operators , Expressions in Jav
 - A string in JavaScript stores a series of characters (The first character is in index = 0).
   
 - There is many built in string methode such as
-   indexof(character), includes(string or character) , toLowerCase() , startWith(string or character) etc.
+   indexOf(character or string ), includes(string or character) , toLowerCase() , startsWith(string or character) etc.
   
 - A string can be any text inside double or single quotes.
   
 - There is different type of operator in JavaScript Arithmatic Operator (+ - * / ..),comparison operator (> >= < <= == === != !=== ...) ...
-- The Difference between == ,!=  (loosy-goosey ) and === ,!== (strict)
-  == checks whether the two given operands have the same value or not. (doing extra steps casting )
+- The Difference between == !=  (loosy-goosey ) and === !== (strict)
+  
+  == checks whether the two given operands have the same value or not (doing extra steps casting ).
+  
   ===  checks whether the two given operands have the same value and type or not.
   
 - The Difference between Expressions and Statement
@@ -47,10 +49,33 @@ In this lesson, we explored Values & Data Types , Operators , Expressions in Jav
 ## Coding Examples
 
 ```javascript
-// Example 1: 
+// Example 1: JS String Methods 
+let text = "Israa";
+console.log(text.length);//5
+console.log(text.startsWith("Is"));//true
+console.log(text.includes("raa"));//true
+console.log(text.indexOf("a"));// 3 first index
+console.log(text.indexOf("q"));// -1
+console.log(text[0]);//I
+console.log(text+" Shtayeh");//Israa Shtayeh
+console.log(text.toLowerCase());//israa
 
-// Example 2: 
 
+
+// Example 2: Declare and assigning variables
+let x=5;
+let y=10;
+let result=x+y*5;//55
+
+let y=11;//Error 
+const v=5;
+v=7;//Error 
+
+// Example 3: Operators
+let num1="100";
+let num2=100;
+console.log(num1==num2);//true
+console.log(num1===num2);//false
 ```
 
 
