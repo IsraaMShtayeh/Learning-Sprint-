@@ -27,6 +27,8 @@ In this lesson, we explored Arrays and Objects  in JavaScript. Here are the key 
 - Object elements can be accessed objectName["propertyName"] or objectName.propertyName
 - Objects can also have methods (property value) objectName.propertyName()
 - The object is referenced by this Keyword inside the object.
+- Built in object in JavaScript (document , console , Math )
+- String (primitive type ) but JavaScript automatically wraps them in string object .
 - ###[Quiz:](https://anjana.dev/javascript-first-steps/2-jsquiz-fancy.html)
 
   
