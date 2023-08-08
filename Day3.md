@@ -18,6 +18,8 @@ In this lesson, we explored Arrays and Objects  in JavaScript. Here are the key 
   - indexOf(string)
   - pop() // pop the last element (remove) and return it 
   - push(element) // add the element to the end of the array
+  - shift() // remove the first array element and return it 
+  - unshift(element) // add new element to the start of the array
   - array1.concat(array2)//combining arrays 1 and 2 without making any changes to the original arrays (creating a new merged array).
 - Objects Collect multiple value together to describe more complex data
 - Objects have Properties (Property Name and Property Value)
@@ -95,7 +97,7 @@ obj.z=5;//undefined
 
 ## Coding Exercises
 
-### [Factorialize a Number](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/factorialize-a-number)
+### [Copy Array Items Using slice()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice)
 
 #### My Solution
 
