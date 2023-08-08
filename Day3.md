@@ -103,5 +103,28 @@ obj.z=5;//undefined
 
 
 ```javascript
+function forecast(arr) {
+  // Only change code below this line
+return arr.slice(2,4);
 
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+```
+
+
+### [Combine Arrays with the Spread Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/combine-arrays-with-the-spread-operator)
+
+#### My Solution
+
+
+```javascript
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence=['learning', ...fragment, 'is', 'fun']; 
+  return sentence;
+}
+
+console.log(spreadOut());
 ```
