@@ -1,14 +1,32 @@
 
 # Day 3: Arrays , Objects , Quiz Project
 
-This README file summarizes the JavaScript lesson on hoisting. Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their scope during the compilation phase.
+This README file summarizes the JavaScript lesson on Arrays , Objects . 
 
 ## Lesson Summary
 
-In this lesson, we explored  in JavaScript. Here are the key points covered:
+In this lesson, we explored Arrays and Objects  in JavaScript. Here are the key points covered:
+- Arrays keep multiple values together in a single collection.
+- Unlike Strings we can modify array in JavaScript (mutable).
+- Array in JavaScript can hold any type of items or mix e.g [1,"text",true,document].
+- Arrays are objects (typeof array return "object").
+- array elements that are located at a given index can be accessed  arrayname[index].
+- - Arrays in JavaScript provide multiple inbuilt functions:
+  - length//return the size of the array
+  - sort()//sort based on strings (elements are converted to strings before sorting them).
+  - join(string) // join all array elements into a string
+  - indexOf(string)
+  - pop() // pop the last element (remove) and return it 
+  - push(element) // add the element to the end of the array
+  - array1.concat(array2)//combining arrays 1 and 2 without making any changes to the original arrays (creating a new merged array).
+- Objects Collect multiple value together to describe more complex data
+- Objects have Properties (Property Name and Property Value)
+- Objects are mutable (you can assign new property).
+- Object elements can be accessed objectName["propertyName"] or objectName.propertyName
+- Objects can also have methods (property value) objectName.propertyName()
+- The object is referenced by this Keyword inside the object.
 
-- 
-
+  
 ## Coding Examples
 
 ```javascript
