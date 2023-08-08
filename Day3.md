@@ -80,6 +80,18 @@ user.speak();//My name is  Israa
 
 ```
 
+Notes
+```javascript
+const obj={
+x:1,
+y:2,
+}
+Object.freeze(obj);// Make Object Immutable 
+obj.z=5;//undefined
+
+```
+
+
 
 ## Coding Exercises
 
