@@ -47,6 +47,37 @@ console.log(names.join("&"));//Israa&Reem&lama&sara
 
 
 // Example 2: Objects
+const user={
+   "first name":"Israa",
+    hobbies:["travel","climbing","gaming"],
+    speak:function(){
+        console.log("My name is ",this["first name"]);
+    }
+    
+}
+console.log(user);
+/*
+{
+  'first name': 'Israa',
+  hobbies: [ 'travel', 'climbing', 'gaming' ],
+  speak: [Function: speak]
+}
+*/
+user.age=22;
+console.log(user);
+/*
+{
+  'first name': 'Israa',
+  hobbies: [ 'travel', 'climbing', 'gaming' ],
+  speak: [Function: speak],
+  age: 22
+}
+
+*/
+console.log(user["first name"]);//Israa
+console.log(user.age);//22
+user.speak();//My name is  Israa
+
 ```
 
 
