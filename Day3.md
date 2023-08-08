@@ -25,15 +25,28 @@ In this lesson, we explored Arrays and Objects  in JavaScript. Here are the key 
 - Object elements can be accessed objectName["propertyName"] or objectName.propertyName
 - Objects can also have methods (property value) objectName.propertyName()
 - The object is referenced by this Keyword inside the object.
+- ###[Quiz:](https://anjana.dev/javascript-first-steps/2-jsquiz-fancy.html)
 
   
 ## Coding Examples
 
 ```javascript
-// Example 1: 
+// Example 1: Arrays 
+const names = ["Israa", "sara", "Reem", "lina"];
+console.log(names[1]);//sara
+console.log(names.indexOf("Israa"));//0
+console.log(names.pop());//lina
+names.push("lama")
+console.log(names);//[ 'Israa', 'sara', 'Reem', 'lama' ]
+console.log(names.length);//4
+const newNames=names.concat(["salma","sanaa"]);//
+console.log(newNames);//[ 'Israa', 'sara', 'Reem', 'lama', 'salma', 'sanaa' ]
+console.log(names);//[ 'Israa', 'sara', 'Reem', 'lama' ]
+console.log(names.sort());//[ 'Israa', 'Reem', 'lama', 'sara' ]
+console.log(names.join("&"));//Israa&Reem&lama&sara
 
 
-// Example 2: 
+// Example 2: Objects
 ```
 
 
