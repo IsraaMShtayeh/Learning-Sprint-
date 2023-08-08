@@ -128,3 +128,117 @@ function spreadOut() {
 
 console.log(spreadOut());
 ```
+
+
+
+
+### [Profile Lookup](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup)
+
+#### My Solution
+
+
+```javascript
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+let result= contacts.filter(item=>item.firstName===name);
+ if(result.length==0){
+ return "No such contact"
+ }
+
+if(result[0][prop]===undefined){
+   
+  return "No such property";
+}
+return result[0][prop];
+
+  // Only change code above this line
+}
+
+lookUpProfile("Akira", "likes");
+```
+
+
+
+
+
+
+### [Write Reusable JavaScript with Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/write-reusable-javascript-with-functions)
+
+#### My Solution
+
+
+```javascript
+function reusableFunction () {
+  console.log("Hi World");
+}
+reusableFunction ();
+
+```
+
+
+
+### [Understanding Undefined Value returned from a Function](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-undefined-value-returned-from-a-function)
+
+#### My Solution
+
+
+```javascript
+// Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive() {
+  sum = sum + 5;
+}
+
+// Only change code above this line
+
+addThree();
+addFive();
+
+```
+
+
+
+### [Return a Value from a Function with Return](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/return-a-value-from-a-function-with-return)
+
+#### My Solution
+
+
+```javascript
+function timesFive(num) {
+  return num *5;
+}
+```
