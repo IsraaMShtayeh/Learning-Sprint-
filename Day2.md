@@ -16,7 +16,7 @@ In this lesson, we explored Values & Data Types , Operators , Expressions in Jav
 - A string in JavaScript stores a series of characters (The first character is in index = 0).
   
 - There is many built in string methode such as
-   indexOf(character or string ), includes(string or character) , toLowerCase() , startsWith(string or character) etc.
+   indexOf(string ), includes(string) , toLowerCase() , startsWith(string) etc.
   
 - A string can be any text inside "" or '' or ``.
   
