@@ -32,15 +32,42 @@ In this lesson, we explored Functions & Events and handlers in JavaScript. Here 
    - "dblclick"
    - "mouseover"
    - "mouseout"
-   - ... MDN 
+   - ... MDN
+- The toString() method returns a string representing the object. e.g console.log(true.toString() === "true")//true
   
 ## Coding Examples
 
 ```javascript
-// Example 1: 
+// Example 1: Functions
+function half(number){
+return number/2;
+}
+//or
+/*
+const half = (number)=>{
+return number/2;
+}
+*/
+//or
+/*
+const half = number=> number/2;
+*/
+console.log(half());//NaN (number)
+console.log(half(2,5));//1 (2/2 = 1) skip 5 
+```
 
+
+
+```javascript
+// Example 2: let 
 
 ```
+
+```javascript
+// Example 3: var 
+
+```
+
 
 
 ## Coding Exercises
