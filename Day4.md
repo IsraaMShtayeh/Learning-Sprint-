@@ -108,15 +108,31 @@ console.log(x);//6
 
 
 ```
-```javascript
-function test(){
-var x=6;
-console.log(x);//6
-}
-test();
-console.log(x);//Error 
-```
+```html
+Example 4 : Events and handling
+//html Code 
+<h1>Hello</h1>
+JavaScript Code
+let h1=document.getElementByTagName("h1");
+h1.addEventListener("mouseover",(event)=>{
+h1.textContent=h1.textContent.toUpperCase();
+});
 
+```
+```javascript
+Example 5: errors
+function f("parameter"){
+}
+
+```
+```javascript
+Example 6: warnings
+function add(x,y){
+return x+y;
+console.log(x+y);//code after 'return' will never be executed
+}
+
+```
 
 ## Coding Exercises
 
