@@ -10,7 +10,7 @@ In this lesson, we explored Functions & Events and handlers in JavaScript. Here 
 - We may easily and quickly build an unnamed function using the arrow function.
 - Scops are nested within the program the widest scope is the global scope .
 - each functions gets its own new scope within the scope where it was declared .
-- whithin each scope we can access variables declared in a wider scope (eg global scope) but not those declared in a narrower scope (eg function scope).
+- whithin each scope we can access variables declared in a wider scope (eg global scope) but not those declared in a narrower scope (eg function scope)
 - variables declared with let can be modified from within a narrower scope .
 - We can make our website interactive by using events and handling(the web browser fires events when certain things happen on the page).
 - We can remove and set attribute of the element
@@ -45,12 +45,94 @@ In this lesson, we explored Functions & Events and handlers in JavaScript. Here 
 
 ## Coding Exercises
 
-### []()
+### [Global Scope and Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-scope-and-functions)
 
 #### My Solution
 
 
 ```javascript
+// Declare the myGlobal variable below this line
 
+let myGlobal=10;
+function fun1() {
+  // Assign 5 to oopsGlobal here
+oopsGlobal=5;
+}
+
+// Only change code above this line
+
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+```
+
+
+### [Local Scope and Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions)
+
+#### My Solution
+
+
+```javascript
+function myLocalScope() {
+  // Only change code below this line
+let myVar ;
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
+
+```
+
+### [Global vs. Local Scope in Functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions)
+
+#### My Solution
+
+
+```javascript
+// Setup
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+const outerWear="sweater";
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+
+```
+### [Stand in Line](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line)
+
+#### My Solution
+
+
+```javascript
+function nextInLine(arr, item) {
+  // Only change code below this line
+  arr.push(item);
+item = arr.shift();
+  return item;
+  // Only change code above this line
+}
+
+// Setup
+let testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
 
 ```
