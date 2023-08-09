@@ -59,15 +59,55 @@ console.log(half(2,5));//1 (2/2 = 1) skip 5
 
 
 ```javascript
-// Example 2: let 
+// Example 2: let
+let x=6;
+function test(){
+console.log(x);//6
+x=7;
+console.log(x);//7
+}
+test();
+console.log(x);//7
 
+```
+```javascript
+let x=6;
+function test(){
+//console.log(x);//Error
+let x=7;
+console.log(x);//7
+}
+test();
+console.log(x);//6
 ```
 
 ```javascript
 // Example 3: var 
 
+var x=6;
+function test(){
+console.log(x);//6
+x=7;
+console.log(x);//7
+}
+test();
+console.log(x);//7
+
+
 ```
 
+```javascript
+var x=6;
+function test(){
+console.log(x);//undefined
+var x=7;
+console.log(x);//7
+}
+test();
+console.log(x);//6
+
+
+```
 
 
 ## Coding Exercises
