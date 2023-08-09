@@ -57,7 +57,6 @@ console.log(half(2,5));//1 (2/2 = 1) skip 5
 ```
 
 
-
 ```javascript
 // Example 2: let
 let x=6;
@@ -70,6 +69,7 @@ test();
 console.log(x);//7
 
 ```
+
 ```javascript
 let x=6;
 function test(){
@@ -107,6 +107,14 @@ test();
 console.log(x);//6
 
 
+```
+```javascript
+function test(){
+var x=6;
+console.log(x);//6
+}
+test();
+console.log(x);//Error 
 ```
 
 
