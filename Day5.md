@@ -1,5 +1,5 @@
 
-# Day 1: Conditionals , Map & filter , Doggos Quiz Game
+# Day 5: Conditionals , Map & filter , Doggos Quiz Game
 
 This README file summarizes the JavaScript lesson on Conditionals and Map & filter. 
 ## Lesson Summary
