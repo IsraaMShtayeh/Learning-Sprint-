@@ -39,6 +39,7 @@ In this lesson, we explored Conditionals and Map & filter in JavaScript. Here ar
 - String templates are useful tool make them eith backticks and ${} e.g :
     - ` My name is ${VariableName} `.
     - `1 plus 2 equal ${1+2}`.
+- The setTimeout() method executes a block of code after the specified time. setTimeout(function , time in milliseconds) 
  
 ## Coding Examples
 Example 1:
