@@ -53,7 +53,47 @@ Example 1:
  const list = document.getElementById("myDIV").classList;
 list.add("myStyle");//add the "myStyle" class to myDIV.
 ```
+Example 2:
+```javascript
+let numbers=[1,2,5,6,7];
+for(let num of numbers){
+console.log(num); //1 2 5 6 7 
+}
+```
+Example 3: Spread
+```javascript
+const oldArray1=[1,2,3];
+const oldArray2=[4,5,6];
 
+
+const newArray1= [...oldArray1,...oldArray2];
+const newArray2=oldArray1.concat(oldArray2);
+
+
+console.log(newArray1);//[ 1, 2, 3, 4, 5, 6 ]
+//the same as 
+console.log(newArray2);//[ 1, 2, 3, 4, 5, 6 ]
+
+oldArray1.push(...oldArray2);
+console.log(oldArray1);//[ 1, 2, 3, 4, 5, 6 ]
+
+```
+
+Example 4: setTimeout
+```javascript
+
+console.log("First");
+setTimeout(()=> console.log("Third"),1000);// after 1 second 
+console.log("Second");
+
+//Result 
+First
+
+Second
+
+Third 
+
+```
 
 ## Coding Exercises
 
