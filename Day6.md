@@ -38,13 +38,30 @@ Code debugging is the process of looking for (and resolving) mistakes in program
    - you can use the browsers debugger to pause and inspect what's happening (the debugger statement creates a  breakpoint where JavaScript will pause and let you look around and see what's going on ) .
 - Error Handling:
     - try : lets us watch out for potential errors
-    - catch : lets us manage errors when they occure 
+    - catch : lets us manage errors when they occure
+-The document.createElement() method creates the HTML element specified by tagName e.g :
+   const button=document.createElement("button");
+ button.name="submit";
+button.value="submit";
+-  The appendChild() method appends an element as the last child of an element.
+  element.appendChild(child);
 
    
 ## Coding Examples
 
 ```javascript
-//Example1:
+//Example1:Destructing Data
+const numbers=[0,1,2,3,4];
+let [,num1,num2,...others]=numbers;
+
+console.log(num1);//1
+console.log(num2);//2
+console.log(others);//[3,4]
+
+const obj={name:"Israa",language:"Arabic"}
+let {name}=obj;
+
+console.log(name);//Israa
 
 ```
 
