@@ -40,6 +40,8 @@ In this lesson, we explored Data Fetch and Promises ,Destructing Data , Async , 
 ### [Requirements:](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week1%20-%20javascript-from-first-steps-to-professional/day%206/task.md)
 
 #### My Solution
+[**Code **](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/tree/main/Task6)
+
 ![Solution](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/Task6_IMG1.PNG)
 ![Solution](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/Task6_IMG2.PNG)
-[**Code **](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/tree/main/Task6)
+
