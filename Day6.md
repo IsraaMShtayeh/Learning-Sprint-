@@ -1,4 +1,4 @@
-
+# ........will be complete soon....... .................................
 # Day 6: Data Fetch and Promises ,Destructing Data , Async , Modules , Wrapping up  
 
 This README file summarizes the JavaScript lesson on Data Fetch and Promises ,Destructing Data , Async , Modules , Wrapping up   . 
@@ -25,7 +25,7 @@ In this lesson, we explored Data Fetch and Promises ,Destructing Data , Async , 
     - body : contains the data we care.
     - ...
 - There is another way to tell JavaScript when promise done do something then(callback)  e.g  fetch().then((value that the promise resolve to ) =>{})
-- ........will be complete soon....... 
+- 
    
 ## Coding Examples
 
