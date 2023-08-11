@@ -25,6 +25,11 @@ In this lesson, we explored Data Fetch and Promises ,Destructing Data , Async , 
     - body : contains the data we care.
     - ...
 - There is another way to tell JavaScript when promise done do something then(callback)  e.g  fetch().then((value that the promise resolve to ) =>{})
+- Destructing Data is a fancy way of declaring multiple variables at once by extracting values from an object with their property name  , we can also destructure Arrays , assigning variables for their items
+  (if we only care about some of the properties we can omit the others )
+- await vaid only in Async functions,generators and async
+- Async functions return promise .
+- 
 - ........will be complete soon....... .................................
    
 ## Coding Examples
