@@ -41,7 +41,6 @@ In this lesson, we explored Data Fetch and Promises ,Destructing Data , Async , 
 
 #### My Solution
 ![Solution](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/Task6_IMG1.PNG)
+![Solution](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/Task6_IMG2.PNG)
 
-```javascript
-
-```
+![Code](
