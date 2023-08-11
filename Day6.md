@@ -29,8 +29,17 @@ In this lesson, we explored Data Fetch and Promises ,Destructing Data , Async , 
   (if we only care about some of the properties we can omit the others )
 - await vaid only in Async functions,generators and async
 - Async functions return promise .
-- 
-- ........will be complete soon....... .................................
+- Modules let us split big codebases across multiple files (make it easier to work with it).
+- import let us uses an exposed variable , functions ... from another module .
+- export let us expose variables , functions  ... from our modules scope to the outside world.
+- Code Debugging : It might be challenging to identify syntax mistakes in programming code.
+Code debugging is the process of looking for (and resolving) mistakes in programming code.
+   - console.log() , console.error() , console.warn() is one way to understanding waht's happening  when our program runs .
+   - you can use the browsers debugger to pause and inspect what's happening (the debugger statement creates a  breakpoint where JavaScript will pause and let you look around and see what's going on ) .
+- Error Handling:
+    - try : lets us watch out for potential errors
+    - catch : lets us manage errors when they occure 
+
    
 ## Coding Examples
 
