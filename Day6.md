@@ -6,8 +6,23 @@ This README file summarizes the JavaScript lesson on Data Fetch and Promises ,De
 ## Lesson Summary
 
 In this lesson, we explored Data Fetch and Promises ,Destructing Data , Async , Modules , Wrapping up in JavaScript. Here are the key points covered:
--
+- API (application programming interface) provide URL's that point at data wa care about.
+- fetch() lets us use JavaScript to load data from API's .
+- Promises: when we work with operations that take along time like fetch
+- Promises can be in 3 possible states
+   - pending: still waiting for the value
+   - fullfilled : resolved finally got the value , all done .
+   - rejected : sorry couldnot get the value , all done .
+- await : let us tell JavaScript stop and wait for an Async operation to finish
+  e.g let response=await fetch("URL"); in this case of a promise : it waits for it to resolve before cont with our code the promise we get from fetch resolves to a response object.
+  await calling .json() method on the response parses its body as a json object 
 
+  respone Object:
+    -  status :  200 success , 404 notfound
+    - body : contains the data we care
+    - ...
+- There is another way to tell JavaScript when promise done do something then(callback)  e.g  fetch().then((value that the promise resolve to ) =>{})
+   
 ## Coding Examples
 
 ```javascript
