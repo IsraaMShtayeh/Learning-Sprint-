@@ -1,5 +1,5 @@
 
-# Day 7: Intriduction , JavaScript Principles , Functions and Callbacks
+# Day 7: Introduction , JavaScript Principles , Functions and Callbacks
 
 This README file summarizes the JavaScript lesson on JavaScript Principles , Functions and Callbacks. 
 
