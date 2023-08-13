@@ -1,31 +1,19 @@
 
-# Day 1: Hoisting
+# Day 7: Intriduction , JavaScript Principles , Functions and Callbacks
 
-This README file summarizes the JavaScript lesson on hoisting. Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their scope during the compilation phase.
+This README file summarizes the JavaScript lesson on JavaScript Principles , Functions and Callbacks. 
 
 ## Lesson Summary
 
-In this lesson, we explored hoisting in JavaScript. Here are the key points covered:
+In this lesson, we explored JavaScript Principles , Functions and Callbacks in JavaScript. Here are the key points covered:
 
-- Hoisting is the process of moving variable and function declarations to the top of their scope.
-- Variable declarations are hoisted but not their assignments. They are accessible but have an initial value of `undefined`.
-- Function declarations are also hoisted, allowing them to be called before they are defined.
-- Hoisting does not apply to function expressions, arrow functions, or variables declared with `let` or `const`.
+- 
+
 
 ## Coding Examples
 
 ```javascript
-// Example 1: Variable Hoisting
-console.log(x); // Output: undefined
-var x = 10;
-console.log(x); // Output: 10
 
-// Example 2: Function Hoisting
-hoistedFunction(); // Output: "Hello, World!"
-
-function hoistedFunction() {
-  console.log("Hello, World!");
-}
 
 ```
 
@@ -112,6 +100,16 @@ console.log(urlSlug(" Winter Is  Coming"));
 
 
 ```javascript
-
+function sumRange (start,end,arr,index){
+if(index>=arr.length)
+return 0;
+let num=0;
+if(arr[index]>=start && arr[index]<=end){
+num=arr[index];
+}
+return sumRange(start,end,arr,index+1)+num;
+}
+// Log to console
+console.log(sumRange(1,4,[1,2,3,4,5,6,1,2,3,1],0))//17
 ```
 
