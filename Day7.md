@@ -32,22 +32,86 @@ function hoistedFunction() {
 
 ## Coding Exercises
 
-### [Factorialize a Number](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/factorialize-a-number)
+### [Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-problem)
 
 #### My Solution
 
 
 ```javascript
-// Example 1: Variable Hoisting
-console.log(x); // Output: undefined
-var x = 10;
-console.log(x); // Output: 10
+const squareList = arr => {
+  // Only change code below this line
+   arr=arr.filter((item)=>item>=0 && Number.isInteger(item));
+  arr=arr.map((item)=>{
+  
+    
+      return item*item;
+    
+   
+  });
+  return arr;
+  // Only change code above this line
+};
 
-// Example 2: Function Hoisting
-hoistedFunction(); // Output: "Hello, World!"
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+```
 
-function hoistedFunction() {
-  console.log("Hello, World!");
+
+
+
+### [Apply Functional Programming to Convert Strings to URL Slugs](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs)
+
+#### My Solution
+
+
+```javascript
+// Only change code below this line
+function urlSlug(title) {
+title=title.toLowerCase();
+title=title.trim();
+let result="";
+let flag=true;
+for(let item of title){
+  if(item===" " && flag ){
+result=result+"-";
+flag=false;
+  }
+  else if (item!=" "){
+    flag=true;
+result=result+item;
+  }
+
 }
+return result;
+}
+// Only change code above this line
+console.log(urlSlug(" Winter Is  Coming"));
+```
+
+
+
+### [Question 1: Functions and Callbacks](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week2%20-%20javaScript-the-hard-parts-v2/day%201/tasks.md)
+
+#### My Solution
+
+
+```javascript
 
 ```
+
+
+
+
+
+
+
+
+### [Question 2: Call Stack and Recursion](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week2%20-%20javaScript-the-hard-parts-v2/day%201/tasks.md)
+
+#### My Solution
+
+
+```javascript
+
+```
+
