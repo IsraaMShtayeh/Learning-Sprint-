@@ -7,16 +7,17 @@ This README file summarizes the JavaScript lesson on JavaScript Principles, Func
 
 In this lesson, we explored JavaScript Principles , functions, and Callbacks in JavaScript. Here are the key points covered:
 - JavaScript code runs line by line and runs or executes each line, known as the thread of execution.
-- JavaScript keeps track of what function is currentaly running by using call stack.
-  (we keep track of the functions we are running and where our execution is using our call stack)
-- Function accept an argument and a function as parameter.
-- 
-
-
-## Coding Examples
-
-```javascript
-```
+- JavaScript keeps track of what function is currently running by using the call stack.
+  (we keep track of the functions we are running and where our execution is using our call stack.)
+- When a function is run, it is added to the call stack, and when we hit return, it is removed.
+- Functions:
+   - We can assign them to variables.
+   - They can be stored as properties of other objects where they are known as methods
+   - They can be passed as inputs as arguments into other functions by reference back to where they were born.
+   - They can be declared , saved inside of function of another function not used there but instead return out (closure)
+-The negative effects of using the arrow function on understanding and readability in general.
+- Pair Programming : is a method of software development where two programmers collaborate; one writes the code and types on the keyboard while the other reviews, suggests changes, and finds problems the positions can frequently change.
+  
 
 
 ## Coding Exercises
