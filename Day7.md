@@ -1,20 +1,21 @@
 
 # Day 7: Introduction , JavaScript Principles , Functions and Callbacks
 
-This README file summarizes the JavaScript lesson on JavaScript Principles , Functions and Callbacks. 
+This README file summarizes the JavaScript lesson on JavaScript Principles, Functions, and Callbacks.
 
 ## Lesson Summary
 
-In this lesson, we explored JavaScript Principles , Functions and Callbacks in JavaScript. Here are the key points covered:
-
+In this lesson, we explored JavaScript Principles , functions, and Callbacks in JavaScript. Here are the key points covered:
+- JavaScript code runs line by line and runs or executes each line, known as the thread of execution.
+- JavaScript keeps track of what function is currentaly running by using call stack.
+  (we keep track of the functions we are running and where our execution is using our call stack)
+- Function accept an argument and a function as parameter.
 - 
 
 
 ## Coding Examples
 
 ```javascript
-
-
 ```
 
 
@@ -84,7 +85,25 @@ console.log(urlSlug(" Winter Is  Coming"));
 
 
 ```javascript
+function increment(arr){
+   return arr.map((item,index)=>item+1);
+}
+ async  function mapAsync (arr,func){
+  let myPromise = new Promise(  function(resolve) {
+          resolve(func(arr));
+  });
+   let result = await myPromise;
+  
+   return result;
+//
+}
 
+async function asyncCall() {
+
+  const result = await mapAsync([1,2,3],increment); 
+  console.log("New Array : ",result); // New Array : [2, 3, 4]
+}
+asyncCall();
 ```
 
 
