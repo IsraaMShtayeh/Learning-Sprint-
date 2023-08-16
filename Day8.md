@@ -7,7 +7,19 @@ This README file summarizes the JavaScript lesson on Closures and Async JS .
 
 In this lesson, we explored Closures and Async in JavaScript. Here are the key points covered:
 
-- 
+- When the function finishes executing, it's local memory is deleted (except the return value).
+- function can be returned form another fuction.
+- The function return will have a special property attached with it called backpack which contains a reference to all the variables in the local memory of the main function that returned that function.
+- what can we call this backpack?
+    - P.L.S.R.D (Persistance,Lexical,Scope ,Referenced,Data)
+    - Closure
+    - C.O.V.E (Closed over Variable Environment)
+- Examples of where closure is used?
+   - Iterators and generators :handling arays  in JavaScript
+   - modules pattern :  we want to have data that persists for the lifespan of app without polluting the global memory
+   - Async JS : to persist state in an asynchronous environment
+   - helper Function like ‘once’ .
+     
 
 ## Coding Examples
 
