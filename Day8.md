@@ -1,5 +1,5 @@
 
-# Day 1: Closures and Async JS 
+# Day 8: Closures and Async JS 
 
 This README file summarizes the JavaScript lesson on Closures and Async JS . 
 
