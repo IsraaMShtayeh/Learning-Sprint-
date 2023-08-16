@@ -43,7 +43,7 @@ console.log(newFunction());//8
 ```javascript
 function calculateAverage(numbers){
 let nums=numbers;
-  return increment =()=>{
+  return average =()=>{
     let sum=0;
      nums.forEach((item)=>{
       sum=sum+item;
@@ -56,6 +56,53 @@ let nums=numbers;
 const newFunction=calculateAverage([2,7,3]);
 
 console.log(newFunction());//4
+```
 
 
+#### My Solution Q3:
+```javascript
+function powerOf (base){
+let b=base;
+  return (exp)=>{
+   
+     return base**exp;
+   
+  }
+}
+
+const newFunction=powerOf(2);
+
+console.log(newFunction(8));//256
+
+```
+
+
+
+#### My Solution Q4:
+```javascript
+function compose  (...params){
+let func=params.reverse();
+  return ()=>{
+    let value=0;
+  func.forEach((item)=>{
+    value=item(value);
+  })
+   return value;
+  }
+}
+function increment(num){
+  num++;
+  return num;
+}
+function multiplyByTwo(num){
+  return num*2;
+}
+function square(num){
+  return num*num;
+}
+function returnTwo(){
+  return 2;
+}
+const newFunction= compose(square,multiplyByTwo,increment,returnTwo);
+console.log(newFunction());//36    
 ```
