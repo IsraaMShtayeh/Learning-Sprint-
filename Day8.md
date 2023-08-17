@@ -1,11 +1,11 @@
 
-# Day 8: Closures and Async JS 
+# Day 8: Closures 
 
-This README file summarizes the JavaScript lesson on Closures and Async JS . 
+This README file summarizes the JavaScript lesson on Closures .
 
 ## Lesson Summary
 
-In this lesson, we explored Closures and Async in JavaScript. Here are the key points covered:
+In this lesson, we explored Closures  in JavaScript. Here are the key points covered:
 
 - When the function finishes executing, it's local memory is deleted (except the return value).
 - function can be returned form another fuction.
@@ -20,13 +20,6 @@ In this lesson, we explored Closures and Async in JavaScript. Here are the key p
    - Async JS : to persist state in an asynchronous environment
    - helper Function like ‘once’ .
      
-
-## Coding Examples
-
-```javascript
-
-
-```
 
 
 ## Coding Exercises
