@@ -39,11 +39,21 @@ After 0ms
 
 ## Coding Exercises
 
-### [Factorialize a Number](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/factorialize-a-number)
+### [Exercises for Async JS & Promises](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week2%20-%20javaScript-the-hard-parts-v2/day%203/tasks.md)
 
-#### My Solution
+#### My Solution : Q1
+```javascript
 
 
+```
+
+#### My Solution : Q2
+```javascript
+
+
+```
+
+#### My Solution : Q3
 ```javascript
 
 
