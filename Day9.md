@@ -49,12 +49,42 @@ After 0ms
 
 #### My Solution : Q2
 ```javascript
+const apis = [
+  {
+    apiName: "products", 
+    apiUrl: "https://dummyjson.com/products",
+  }, 
+  {
+    apiName: "users", 
+    apiUrl: "https://dummyjson.com/users",
+  }, 
+  {
+    apiName: "posts", 
+    apiUrl: "https://dummyjson.com/posts",
+  }, 
+  {
+    apiName: "comments", 
+    apiUrl: "https://dummyjson.com/comments",
+  }
+]
+const  display =function(data){
+ console.log(data);
 
+}
+
+function doWork(result, data) {
+result.data=data;
+  console.log(result);
+}
+const executeInParallelWithPromises = (apis) => {
+apis.forEach((api)=>{
+ const FutureData=fetch(api.apiUrl);
+let result={name:api.apiName , URL:api.apiUrl}
+ FutureData.then(data => data.json()).then(doWork.bind(null, result));
+})
+}
+executeInParallelWithPromises(apis);
 
 ```
 
-#### My Solution : Q3
-```javascript
 
-
-```
