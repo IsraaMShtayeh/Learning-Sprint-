@@ -17,7 +17,13 @@ In this lesson, we explored Async JavaScript and Promises in JavaScript. Here ar
 - Some Javascript features are actually Browser APIs e.g (document , setTimeout , console , fetch ).
 - Functions that need to be asynchronously executed, are pushed onto the callback queue .
 - When the callstack is empty, the functions in the callback ( keep track of multiple function calls) queue are execute (when the event loop finds an empty call stack).
-- 
+- A Promise is a JavaScript object that links producing ( takes some time ) code and consuming code (wait for a result).
+- then(resolve , reject )
+   - resolve : method is called whenever a promise is resolved It takes data from the resolved promise.
+   - reject :  method is called whenever a promise is reject It takes data from the reject promise.
+   - 
+- When the timer expires, the callback function that was passed in the setTimeout() is placed to the callback queue (This is where your asynchronous code gets pushed to, and waits for the execution).
+- The callback function passed to the then() method is added to the microstack queue and when all global code is finished running and there's nothing on the callstack the event loop goes and checks the queues (first the microstack queue then callback queue )
 
 
 ## Coding Examples
@@ -34,6 +40,23 @@ console.log("First");
 First 
 After 0ms 
 */
+```
+
+```javascript
+// Example 2: promises
+let prom1 = new Promise((resolve, reject)=>{
+	resolve("Success");
+})
+.then(e=>{console.log(e)})//Success
+```
+
+```javascript
+// Example 3: promises
+let prom1 = new Promise((resolve, reject)=>{
+	reject("Error");
+})
+.then(e=>{console.log(e)}).catch(e=>{console.log(e)});//Error 
+
 ```
 
 
