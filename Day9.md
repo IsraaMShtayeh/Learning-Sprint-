@@ -66,7 +66,64 @@ let prom1 = new Promise((resolve, reject)=>{
 
 #### My Solution : Q1
 ```javascript
+const task1 = (cb) => setTimeout(() => {
+    const message = "Task 1 has executed successfully!";
+    cb(message);
+  }, 3000)
+  
+  const task2 = (cb) => setTimeout(() => {
+    const message = "Task 2 has executed successfully!";
+    cb(message);
+  }, 0)
+  
+  const task3 = (cb) => setTimeout(() => {
+    const message = "Task 3 has executed successfully!";
+    cb(message);
+  }, 1000)
+  
+  const task4 = (cb) => setTimeout(() => {
+    const message = "Task 4 has executed successfully!";
+    cb(message);
+  }, 2000)
+  
+  const task5 = (cb) => setTimeout(() => {
+    const message = "Task 5 has executed successfully!";
+    cb(message);
+  }, 4000)
+  
+  const asyncTasks = [task1, task2, task3, task4, task5];
+  var promises = [];
 
+  const executeInSequenceWithCBs = async (tasks) => {
+
+    let messages=[];
+    return new Promise(async(resolve)=>{
+        tasks.forEach(task => {
+            promises.push(new Promise(function( myResolve) {
+                task(myResolve);
+          })
+        
+          );
+    
+        });
+   const allPromise = await Promise.all(promises).then((values)=>{
+    messages=values;
+    
+    });
+        resolve(messages);
+    });
+    
+ 
+
+}
+
+
+
+var messages=[];
+executeInSequenceWithCBs(asyncTasks).then((values)=>{
+    messages=values;
+    console.log(messages);
+});
 
 ```
 
