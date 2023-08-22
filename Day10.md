@@ -9,8 +9,6 @@ In this lesson, we explored classes and Prototypes in JavaScript. Here are the k
 
 - Object properties can be both primitive values, other objects, and functions.
 
-## Coding Examples
-
 ```javascript
 const user ={
 name : "Israa",
@@ -35,6 +33,22 @@ newUser.increment=function(){
 newUser.score++;
 }
 return newUser;
+}
+
+const user=userCreator("Israa",6);
+user.increment();
+console.log(user.score);//7
+```
+-
+```javaScript
+function userCreator(name,score){
+const newUser=Object.create(userFunctionStore);
+newUser.name=name;
+newUser.score=score;
+return newUser;
+}
+const userFunctionStore={
+increment:function(){this.score++;}
 }
 
 const user=userCreator("Israa",6);
