@@ -20,8 +20,7 @@ Undefined: the variable has no value.
  - Uninitialized: The idea is that certain variables, like block scope ones, don't get initialized; they never initially get set to - 
   Undefined. When something is in an uninitialized state, it is off limits you're not allowed to touch it in any way shape or form or 
   you'll get an error, and the error you get is the TDZ (Temporal Dead Zone) error.
-- Special Number:
-  - NaN ( value indicates invalid number )
+- Special Number: NaN ( value indicates invalid number )
      ```javascript     
      var x= Number("n/a"); //NaN
      var y = Number("Hello"); //NaN
@@ -41,7 +40,7 @@ console.log(isNaN(y));//true
 console.log(Number.isNaN(x));//false
 console.log(Number.isNaN(y));//false
 ```
-   - Negative Zero
+- Special Number: Negative Zero
 
  ```javascript
     var x=-0;
@@ -69,13 +68,20 @@ console.log(sign(0));//1
 console.log(sign(-3));//-1
 console.log(sign(3));//1
 ```
-
-
-
-## Coding Examples
+- Javascript automatically converts primitive values (String, Boolean, Number )into objects when necessary, so we can just create primitive values directly and use them with the same utilities as though they were objects.
+- Dates have no corresponding primitive value and can only be created with new Date().
+- Array, Function, and RegExp all have some extra features when created with their constructors. However, unless those features are specifically needed, the literal form is preferable.
+- Don't use new with ( String, Boolean, Number ) you should absolutely never do that.
+- Use new with ( Object, Array, Function, Date, RegExp, Error ).
+  ```javascript
+  var date = new Date("March 5 , 2023");
+console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
+  ```
+- 
+- 
 
 ```javascript
-// Example 1:
+
 
 
 ```
