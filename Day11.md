@@ -21,7 +21,7 @@ Undefined: the variable has no value.
   Undefined. When something is in an uninitialized state, it is off limits you're not allowed to touch it in any way shape or form or 
   you'll get an error, and the error you get is the TDZ (Temporal Dead Zone) error.
 - Special Number:
-   - NaN ( value indicates invalid number )
+  - NaN ( value indicates invalid number )
      ```javascript     
      var x= Number("n/a"); //NaN
      var y = Number("Hello"); //NaN
@@ -31,6 +31,7 @@ Undefined: the variable has no value.
 - NaNs not equal to each other ( NaNs only value doesn't  have identity property (meaning is not equal to each other)
 - isNaN() function first converts the argument to a number, and then returns true if the resulting value is NaN
 - Number.isNaN() returns true if and only if the argument is of type Number and the value equals to NaN.
+- Number.isNaN : doesn't do any coercion for us.
 ```javascript
 var x = "n/a"; //NaN
 var y = "Hello";
@@ -40,6 +41,35 @@ console.log(isNaN(y));//true
 console.log(Number.isNaN(x));//false
 console.log(Number.isNaN(y));//false
 ```
+  - Negative Zero
+    ```javascript
+    var x=-0;
+console.log(x===-0);//true
+console.log(x===0);//true
+console.log(x.toString());//"0"
+console.log(x<0);//false
+console.log(x>0);//false
+console.log(Object.is(x,0));//false
+console.log(Object.is(x,-0));//true
+
+console.log(Math.sign(-3));//-1
+console.log(Math.sign(3));//1
+console.log(Math.sign(-0));//0
+console.log(Math.sign(0));//0
+```
+## fix Math.sign
+
+```javascript
+function sign(v){
+  return v!==0?Math.sign(v):Object.is(v,-0)?-1:1;
+}
+console.log(sign(-0));//-1
+console.log(sign(0));//1
+console.log(sign(-3));//-1
+console.log(sign(3));//1
+```
+
+
 
 ## Coding Examples
 
