@@ -83,12 +83,13 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
   
   - ToPrimitive()
   - ToString()
+  ![toString()](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/toString.PNG)
   - ToNumber()
+      ![toNumber()](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/toNumber.PNG)
   - ToBoolean()
+    ![ToBoolean()](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/ToBoolean.PNG)
 
-```javascript
 
-```
 
 
 
