@@ -81,45 +81,147 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
 - Abstract Operations are responsible for performing type conversion in Javascript, Whenever coercion (implicit or explicit) occurs, one or more internal operations, known as abstract operations, are performed.
 - primary abstract operations:
   
-  - ToPrimitive()
+  - ToPrimitive()   
+  - ToString():This abstract operation takes any value and converts it to a representation of the value in string form.
+    - null "null"
+    - undefined          "undefined"
+    - true               "true"
+    - false               "false"
+    - 3.14                "3.14"
+    - 0                    "0"
+    - -0                   "0"
+    - []                    ""
+    - [1,2,3]               "1,2,3"
+    - [null,undefined]      ","
+    - [,,,,]                ",,,"
+    - [[[],[],[]],[]]       ",,,"
+    - {}                    "[object object ]"
+    - {a:2}                 "[object object ]"
+    - {toString(){return x}}   "x"   //override toString()
+      
+
+
+  - ToNumber() :
+     - ""       0
+     - "0"      0
+     - "-0"     -0
+     - "009"     9
+     - "3.14"   3.14
+     - "0."     0
+     - "."       NaN
+     - "0xaF"     175
+     - false       0
+     - true       1
+     - null       0
+     - undefined   NaN
+       
+- For any array and object by default valueOf(){return this}
+   - [""]   0
+   - ["0"]   0
+   - ["-0"]   -0
+   - [null]   0               //null become empty string 
+   - [undefined]  0        // undefined become empty string 
+   - [1,2,3]  NaN
+   - [[[[]]]]   0
+
     
-  - ToString()
-  ![toString()](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/toString.PNG)
-
-
-
-  - ToNumber()
-      ![toNumber()](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/toNumber.PNG)
-
-
-
-  - ToBoolean()
-    ![ToBoolean()](https://github.com/IsraaMShtayeh/Mastering-JavaScript-in-20-Days/blob/main/Images/toBoolean.PNG)
+- ToBoolean()
+    - Falsy ( " ",0,-0,null,NaN,false,undefined)
+    - Truthy ( "foo",23,{a:1},[1,2,3],true,function(){...})
 
 
 
 
 
 
-  
+### [SECTION'S EXERCISES	](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%201/tasks.md)
 
-
-
-
-
+#### My Solution
+Q1:
 ```javascript
-
-
-
+function convertStringToNumber(input) {
+if(typeof input==="number"){
+  return input+0;
+}
+  return {type: typeof input ,
+       value : input};
+}
+console.log(convertStringToNumber(5));//5
+console.log(convertStringToNumber("JS"));// {type: "string", value: "JS"}
 ```
 
 
-## Coding Exercises
-
-### []()
-
-#### My Solution
-
-
+Q2:
 ```javascript
+const checkNaN = (value) => {
+ if(isNaN(value))
+ return true;
+ return false;
+}
+console.log(checkNaN("Hello"));//true
+console.log(checkNaN("3"));//false
+```
+
+
+
+Q3:
+```javascript
+function compareObjects(input1, input2) {
+if(typeof input1 !== "object" || typeof input2 !== "object"){
+  return [input1,input2];
+}
+let keys1 = Object.keys(input1);
+let keys2= Object.keys(input2);
+ if (keys1.length != keys2.length) return false;
+ for (let key of keys1) {
+    if (!keys2.includes(key) || input1[key]!==input2[key]) return false;
+}
+return true;
+
+}
+const obj1={
+  x:5,
+  y:4,
+}
+const obj2={
+  x:5,
+  y:4,
+}
+const obj3={
+  x:5,
+}
+const obj4={
+  x:5,
+  y:10,
+}
+console.log(compareObjects(obj1,obj2));//true
+console.log(compareObjects(obj1,obj3));//false
+console.log(compareObjects(obj1,obj4));//false
+console.log(compareObjects(obj1,"hello"));// [{...}, "hello"]
+```
+
+
+Q5:
+```javascript
+const complexCoercion = (input) => {
+if(input === Object(input)){
+return input;
+}else{
+    if(input===null || input===undefined){
+    return false;
+  }
+if(typeof input==="number"){
+  input=input.toString();
+  
+}
+return Boolean(input);
+
+}
+}
+
+console.log(complexCoercion(null));//false
+console.log(complexCoercion(undefined));//false
+console.log(complexCoercion("false"));//true
+console.log(complexCoercion(5));//true
+console.log(complexCoercion({a:5}));//{a:5}
 ```
