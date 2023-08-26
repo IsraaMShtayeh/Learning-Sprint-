@@ -41,7 +41,7 @@ console.log(isNaN(y));//true
 console.log(Number.isNaN(x));//false
 console.log(Number.isNaN(y));//false
 ```
-  - Negative Zero
+   - Negative Zero
 
  ```javascript
     var x=-0;
