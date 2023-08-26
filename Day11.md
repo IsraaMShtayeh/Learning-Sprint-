@@ -29,8 +29,17 @@ Undefined: the variable has no value.
      console.log(x==y);//false why?
      ```
 - NaNs not equal to each other ( NaNs only value doesn't  have identity property (meaning is not equal to each other)
-- 
+- isNaN() function first converts the argument to a number, and then returns true if the resulting value is NaN
+- Number.isNaN() returns true if and only if the argument is of type Number and the value equals to NaN.
+```javascript
+var x = "n/a"; //NaN
+var y = "Hello";
+console.log(isNaN(x));//true
+console.log(isNaN(y));//true
 
+console.log(Number.isNaN(x));//false
+console.log(Number.isNaN(y));//false
+```
 
 ## Coding Examples
 
