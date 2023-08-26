@@ -42,6 +42,7 @@ console.log(Number.isNaN(x));//false
 console.log(Number.isNaN(y));//false
 ```
   - Negative Zero
+    
     ```javascript
     var x=-0;
 console.log(x===-0);//true
@@ -58,7 +59,6 @@ console.log(Math.sign(-0));//0
 console.log(Math.sign(0));//0
 ```
 ## fix Math.sign
-
 ```javascript
 function sign(v){
   return v!==0?Math.sign(v):Object.is(v,-0)?-1:1;
