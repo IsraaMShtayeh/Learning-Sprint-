@@ -1,4 +1,4 @@
-
+ 
 # Day 11: Introduction, Types, and Coercion.
 This README file summarizes the JavaScript lesson on Introduction, Types, and Coercion.
 
@@ -73,12 +73,31 @@ console.log(sign(3));//1
 - Array, Function, and RegExp all have some extra features when created with their constructors. However, unless those features are specifically needed, the literal form is preferable.
 - Don't use new with ( String, Boolean, Number ) you should absolutely never do that.
 - Use new with ( Object, Array, Function, Date, RegExp, Error ).
-  ```javascript
+ ```javascript
   var date = new Date("March 5 , 2023");
 console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
-  ```
-- 
-- 
+```
+
+- Abstract Operations are responsible for performing type conversion in Javascript, Whenever coercion (implicit or explicit) occurs, one or more internal operations, known as abstract operations, are performed.
+- primary abstract operations:
+  
+  - ToPrimitive()
+  - ToString()
+  - ToNumber()
+  - ToBoolean()
+
+```javascript
+
+```
+
+
+
+
+  
+
+
+
+
 
 ```javascript
 
