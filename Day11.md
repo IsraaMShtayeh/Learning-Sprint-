@@ -15,11 +15,9 @@ In this lesson, we explored Introduction, Types, and Coercion in JavaScript. Her
   typeof v; // (type of the value that is currently in v ).
 ```   
 - Undefined vs. Undeclared vs. uninitialized:
- - Undefined: the variable has no value.
+ - Undefined: It occurs when a variable has been declared but has not been assigned any value.
  - Undeclared: never been created in any scope that we have access to.
- - Uninitialized: The idea is that certain variables, like block scope ones, don't get initialized; they never initially get set to - 
-  Undefined. When something is in an uninitialized state, it is off limits you're not allowed to touch it in any way shape or form or 
-  you'll get an error, and the error you get is the TDZ (Temporal Dead Zone) error.
+ - Uninitialized: An uninitialized variable is just a variable that has been declared, but has not been assigned a value when it was declared.
 - Special Number: NaN ( value indicates invalid number )
      ```javascript     
      var x= Number("n/a"); //NaN
@@ -82,7 +80,7 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
   
 - primary abstract operations:
   
-  - ToPrimitive()  : The abstract operation ToPrimitive takes an input argument and an optional argument PreferredType.
+  - ToPrimitive(hint)  : The abstract operation ToPrimitive takes an input argument and an optional argument PreferredType.
      The abstract operation ToPrimitive converts its input argument to a non-Object type.
     
  Number Algorithm : If the hint is number , it calls the valueOf() function first, and if the returned value is primitive, it'll use it. If the object has no primitive value, valueOf() returns the object back then the toString() function gets called. Its value will be used if it is primitive; otherwise, it would result in a type error.
@@ -136,7 +134,7 @@ String Algorithm : If the hint is string , the order is reversed compared to the
    - {valueOf(){return 3} ==> 3
 
     
-- ToBoolean() :  is called to convert an argument to a Boolean type whenever we use a value that is not Boolean in a place that needs a Boolean
+- ToBoolean():  is called to convert an argument to a Boolean type whenever we use a value that is not Boolean in a place that needs a Boolean
     - Falsy ( " ",0,-0,null,NaN,false,undefined)
     - Truthy ( "foo",23,{a:1},[1,2,3],true,function(){...})
 - Corner Cases of Coersion
