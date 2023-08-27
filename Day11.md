@@ -15,7 +15,7 @@ In this lesson, we explored Introduction, Types, and Coercion in JavaScript. Her
   typeof v; // (type of the value that is currently in v ).
 ```   
 - Undefined vs. Undeclared vs. uninitialized:
-Undefined: the variable has no value.
+ - Undefined: the variable has no value.
  - Undeclared: never been created in any scope that we have access to.
  - Uninitialized: The idea is that certain variables, like block scope ones, don't get initialized; they never initially get set to - 
   Undefined. When something is in an uninitialized state, it is off limits you're not allowed to touch it in any way shape or form or 
