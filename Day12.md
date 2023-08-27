@@ -21,7 +21,8 @@ console.log(x===y);//false
 ```
 -  == prefers numeric comparison
 - == if you use it with something that's not a primitive Turn it into a primitive (we would invoke the ToPrimitive and come back to algorithm with two primitives and make a decision)
-- ```javascript
+  
+```javascript
 var x=[42];
 var y=42;
 console.log(x==y);//true
@@ -30,7 +31,7 @@ console.log(x===y);//false
 - == summary
    - if types are the same its just gonna use triple equals
    - if null or undefined : equal
-   - ifnon primitives : ToPrimitive
+   - if non primitives: ToPrimitive
    - prefer ToNumber.
 
 ```javascript
@@ -78,10 +79,10 @@ if(x==false){
 - The case for double equals (the case for prefering ==)
    - Knowing types is always better than not Knowing them ( only use == when you know the types)
 - if both types are the same == is identical to ===
-- if the typesare different using one === would be broken .
-- since === pointess when the types don't match its similarly unnecessary when they do match .
+- if the types are different using one === would be broken .
+- since === pointless when the types don't match it's similarly unnecessary when they do match.
 - Summary:
-   - If you know the types in a comparison whenever the types match or not == is the more sensible choice
+   - If you know the types in a comparison  whether the types match or not == is the more sensible choice
    - Not knowing the types means fully understanding that code so best to refactor so you can know the types .
    - Not knowing the types is equivalent to assuming type conversion because of corner cases the only safe choice is === (if you can't or won't use known and obvious types === is the only reasonable choice )
 - Making types known and obvious leads to better code if types are known == is best otherwise fall back to ===.
