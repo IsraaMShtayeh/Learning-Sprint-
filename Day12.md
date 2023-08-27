@@ -1,5 +1,5 @@
 
-# Day 12: Equality & Static Typing .
+# Day 12: Equality & Static Typing 💻 
 
 This README file summarizes the JavaScript lesson on Equality & Static Typing.
 
@@ -85,22 +85,60 @@ if(x==false){
    - Not knowing the types means fully understanding that code so best to refactor so you can know the types .
    - Not knowing the types is equivalent to assuming type conversion because of corner cases the only safe choice is === (if you can't or won't use known and obvious types === is the only reasonable choice )
 - Making types known and obvious leads to better code if types are known == is best otherwise fall back to ===.
-- 
+- The core difference is that statically-typed languages perform type checking at compile time, while dynamically-typed languages perform type checking at runtime.
+- Static type  checking  the type before running the program
+- Dynamic type checking the type while running the program.
+-  JavaScript is a dynamically-typed language, you can go about declaring variables, functions, objects and anything without declaring the type.
+-   Flow and TypeScript have recently stepped in to give JavaScript developers the option to use static types.
+-    Syntax for static types using Flow:
+  
+     ```
+     var teacher:string = "kyle";
+     teacher={name:"kyle"}; // Error cannt assign object to a String .
+       
+     ```
+- Custome Type:
+  
+  ```
+  type student={name:string}
+  function getName(StudentRec:string){
+  return StudentRec.name;
+  }
+  var  firstStudent:student ={name:"Frank"}
+  var name:string = getName(firstStudent);
+  ```
+- Validating operand Types
+  
+  ```
+  var studentName:string="Frank";
+  var studentCount:number=16-studentName;//Error Can't subtract string 
+  ```
+- TypeScript and flow: helpful to solve typing issues and make your types more obvious.
+- Static Typing pros:
+   - They make types more obvious in code
+   - Familiarity: they look like other language's type systems
+   - Extremely popular these days
+   - They're very sophisticated and good at what they do
+- Static Typing cons:
+   - They use "non-JS-standard" syntax (or code comments)
+   - They require* a build process, which raises the barrier to entry
+   - Their sophistication can be intimidating to those without prior formal types experience
+   - They focus more on "static types" (variables, parameters, returns, properties, etc) than value types.
+- Summary:
+   - JavaScript has a (dynamic) type system, which uses various forms of coercion for value type conversion, including equality comparisons.
+   - However, the prevailing response seems to be: avoid as much of this system as possible, and use === to "protect" from needing to worry about types.
+   - Part of the problem with avoidance of whole swaths of JS, like pretending === saves you from needing to know types, is that it tends to systemically perpetuate bugs.
+   - You simply cannot write quality JS programs without knowing the types involved in your operations
+   - Alternately, many choose to adopt a different "static types" system layered on top
+   - While certainly helpful in some respects, this is "avoidance" of a different sort
+   - Apparently, JS's type system is inferior so it must be replaced,rather than learned and leveraged
+
+
      
-
-
-## Coding Examples
-
-```javascript
-var obj1={name:"kyle"}
-var obj2={name:"kyle"}
-console.log(obj1==obj2)//false
-```
-
 
 ## Coding Exercises
 
-### []()
+### [SECTION'S EXERCISES](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%202/tasks.md)
 
 #### My Solution
 
