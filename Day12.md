@@ -13,7 +13,7 @@ var obj1={name:"kyle"}
 var obj2={name: "kyle"}
 console.log(obj1==obj2)//false
 ```
--```javascript
+```javascript
 let x=null;
 let y=undefined;
 console.log(x==y);//true
