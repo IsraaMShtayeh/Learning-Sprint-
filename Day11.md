@@ -79,55 +79,90 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
 ```
 
 - Abstract Operations are responsible for performing type conversion in Javascript, Whenever coercion (implicit or explicit) occurs, one or more internal operations, known as abstract operations, are performed.
+  
 - primary abstract operations:
   
-  - ToPrimitive()   
+  - ToPrimitive()  : The abstract operation ToPrimitive takes an input argument and an optional argument PreferredType.
+     The abstract operation ToPrimitive converts its input argument to a non-Object type.
+    
+ Number Algorithm : If the hint is number , it calls the valueOf() function first, and if the returned value is primitive, it'll use it. If the object has no primitive value, valueOf() returns the object back then the toString() function gets called. Its value will be used if it is primitive; otherwise, it would result in a type error.
+
+String Algorithm : If the hint is string , the order is reversed compared to the number algorithm. It calls the non-primitive toString() function first, and if it gets a string representation, it'll just use it; otherwise, it'll try the valueOf() method to see if the object has any primitive value.
+
   - ToString():This abstract operation takes any value and converts it to a representation of the value in string form.
-    - null "null"
-    - undefined          "undefined"
-    - true               "true"
-    - false               "false"
-    - 3.14                "3.14"
-    - 0                    "0"
-    - -0                   "0"
-    - []                    ""
-    - [1,2,3]               "1,2,3"
-    - [null,undefined]      ","
-    - [,,,,]                ",,,"
-    - [[[],[],[]],[]]       ",,,"
-    - {}                    "[object object ]"
-    - {a:2}                 "[object object ]"
-    - {toString(){return x}}   "x"   //override toString()
+  - If we call ToString(Object) it's going to invoke ToPrimitive() with the String hint (call toString() first and then it's going to call valueOf()).
+    
+    - null     ==>          "null"
+    - undefined  ==>        "undefined"
+    - true       ==>         "true"
+    - false     ==>          "false"
+    - 3.14      ==>          "3.14"
+    - 0        ==>            "0"
+    - -0       ==>            "0"
+    - []        ==>            ""
+    - [1,2,3]    ==>           "1,2,3"
+    - [null,undefined]  ==>     ","
+    - [,,,,]       ==>         ",,,"
+    - [[[],[],[]],[]]  ==>     ",,,"
+    - {}          ==>          "[object object ]"
+    - {a:2}        ==>         "[object object ]"
+    - {toString(){return x}}  ==> "x"   //override toString()
       
 
-
-  - ToNumber() :
-     - ""       0
-     - "0"      0
-     - "-0"     -0
-     - "009"     9
-     - "3.14"   3.14
-     - "0."     0
-     - "."       NaN
-     - "0xaF"     175
-     - false       0
-     - true       1
-     - null       0
-     - undefined   NaN
+  - ToNumber() : will be invoked to convert it to a value of type number.
+  -  If we call ToNumber(Object) it's going to invoke ToPrimitive() with the Number hint (call valueOf() first and then it's going to call toString()).
+     - ""   ==>    0
+     - "0"   ==>   0
+     - "-0"  ==>   -0
+     - "009"  ==>   9
+     - "3.14" ==>  3.14
+     - "0."  ==>   0
+     - "."   ==>    NaN
+     - "0xaF"  ==>    175
+     - false   ==>    0
+     - true    ==>   1
+     - null  ==>     0
+     - undefined  ==>  NaN
        
 - For any array and object by default valueOf(){return this}
-   - [""]   0
-   - ["0"]   0
-   - ["-0"]   -0
-   - [null]   0               //null become empty string 
-   - [undefined]  0        // undefined become empty string 
-   - [1,2,3]  NaN
-   - [[[[]]]]   0
+   - [""]  ==> 0
+   - ["0"] ==>  0
+   - ["-0"] ==>  -0
+   - [null] ==>  0               //null become empty string 
+   - [undefined] ==>  0        // undefined become empty string 
+   - [1,2,3] ==> NaN
+   - [[[[]]]] ==>  0
+   - {...} ==> NaN
+   - {valueOf(){return 3} ==> 3
 
     
-- ToBoolean()
+- ToBoolean() :  is called to convert an argument to a Boolean type whenever we use a value that is not Boolean in a place that needs a Boolean
     - Falsy ( " ",0,-0,null,NaN,false,undefined)
     - Truthy ( "foo",23,{a:1},[1,2,3],true,function(){...})
+- Corner Cases of Coersion
+console.log(Number(""));//0
+console.log(Number("\t\n"));//0
+console.log(Number(null));//0
+console.log(Number(undefined));//NaN
+console.log(Number([]));//0
+console.log(Number([1,2,3]));//NaN
+console.log(Number([null]));//0
+console.log(Number([undefined]));//0
+console.log(Number({}));//NaN
+
+console.log(String(-0));//0
+console.log(String(null));//"null"
+console.log(String(undefined));//undefined
+console.log(String([null]));//""
+console.log(String([undefined]));//""
+console.log(String([null]));//""
+console.log(String([undefined]));//""
+console.log(Boolean(new Boolean(false)));//true
+
+
+console.log(Number(true));//1
+console.log(Number(false));//0
+console.log(String(true>1));//false
 
 
 
@@ -140,14 +175,14 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
 Q1:
 ```javascript
 function convertStringToNumber(input) {
-if(typeof input==="number"){
-  return input+0;
+if(typeof input==="string"){
+  return +input;
 }
   return {type: typeof input ,
        value : input};
 }
-console.log(convertStringToNumber(5));//5
-console.log(convertStringToNumber("JS"));// {type: "string", value: "JS"}
+console.log(convertStringToNumber("5"));//5
+console.log(convertStringToNumber(5));// {type: "number", value: "JS"}
 ```
 
 
