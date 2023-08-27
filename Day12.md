@@ -141,8 +141,61 @@ if(x==false){
 ### [SECTION'S EXERCISES](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%202/tasks.md)
 
 #### My Solution
+Q1:
+``` javascript
 
-
+```
+Q2: c:
 ```javascript
+function testScope1() {
+  if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+  }
+  console.log(a);//1
+  console.log(b);//Reference Error
+ console.log(c);//Reference Error 
+}
 
+testScope1();
+```
+Q3:
+```javascript
+function testScope2() {
+  console.log(a);//undefined
+  console.log(b);//Reference Error 
+  console.log(c);//Reference Error 
+  if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+  }
+}
+
+testScope2();
+
+```
+
+Q4: c
+``` javascript
+function testScope3() {
+  var a = 36;
+  let b = 100;
+  const c = 45;
+
+  console.log([a, b, c]);//[36,100,45]
+
+  if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+
+    console.log([a, b, c]);//[1,2,3]
+  }
+
+  console.log([a, b, c]);//[1,100,45]
+}
+
+testScope3();
 ```
