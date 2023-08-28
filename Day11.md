@@ -143,7 +143,7 @@ String Algorithm : If the hint is string , the order is reversed compared to the
     - Truthy ( "foo",23,{a:1},[1,2,3],true,function(){...})
 - Corner Cases of Coersion
   
-  ```javascript
+```javascript
 console.log(Number(""));//0
 console.log(Number("\t\n"));//0
 console.log(Number(null));//0
@@ -153,7 +153,8 @@ console.log(Number([1,2,3]));//NaN
 console.log(Number([null]));//0
 console.log(Number([undefined]));//0
 console.log(Number({}));//NaN
-
+```
+```javascript
 console.log(String(-0));//0
 console.log(String(null));//"null"
 console.log(String(undefined));//undefined
@@ -162,18 +163,14 @@ console.log(String([undefined]));//""
 console.log(String([null]));//""
 console.log(String([undefined]));//""
 console.log(Boolean(new Boolean(false)));//true
-
-
+```
+```javascript
 console.log(Number(true));//1
 console.log(Number(false));//0
 console.log(String(true>1));//false
 ```
 
-
-
-
-
-### [SECTION'S EXERCISES	](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%201/tasks.md)
+### [SECTION'S EXERCISES](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%201/tasks.md)
 
 #### My Solution
 Q1:
