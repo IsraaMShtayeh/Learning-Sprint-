@@ -15,9 +15,13 @@ In this lesson, we explored Introduction, Types, and Coercion in JavaScript. Her
   typeof v; // (type of the value that is currently in v ).
 ```   
 - Undefined vs. Undeclared vs. uninitialized:
- - Undefined: It occurs when a variable has been declared but has not been assigned any value.
- - Undeclared: never been created in any scope that we have access to.
- - Uninitialized: An uninitialized variable is just a variable that has been declared, but has not been assigned a value when it was declared.
+  
+  Undefined: It occurs when a variable has been declared but has not been assigned any value.
+  
+  Undeclared: never been created in any scope that we have access to.
+  
+   Uninitialized: An uninitialized variable is just a variable that has been declared, but has not been assigned a value when it was declared.
+  
 - Special Number: NaN ( value indicates invalid number )
      ```javascript     
      var x= Number("n/a"); //NaN
