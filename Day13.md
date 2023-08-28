@@ -22,7 +22,7 @@ console.log(topic);//JS
 -
 ```javascript
 "use strict";
-x = 3.14;   
+x = 3.14; //Reference Error 
 ```
 ```javascript
 function outer(){
@@ -34,8 +34,7 @@ function outer(){
 outer();//Inside
 inner("Outside");//ReferenceError: inner is not defined
 ```
-- LexicalScope
-jkihefigiueooooooooooooooooooooooooo
+
 - Named Function Expressions Benefits:
 1. Reliable function self-reference (recursion, etc)
 2. More debuggable stack traces
