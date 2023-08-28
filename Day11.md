@@ -84,7 +84,7 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
   
 - primary abstract operations:
   
-  - ToPrimitive(hint)  : The abstract operation ToPrimitive takes an input argument and an optional argument PreferredType.
+- ToPrimitive(hint)  : The abstract operation ToPrimitive takes an input argument and an optional argument PreferredType.
      The abstract operation ToPrimitive converts its input argument to a non-Object type.
     
  Number Algorithm : If the hint is number , it calls the valueOf() function first, and if the returned value is primitive, it'll use it. If the object has no primitive value, valueOf() returns the object back then the toString() function gets called. Its value will be used if it is primitive; otherwise, it would result in a type error.
