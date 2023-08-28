@@ -91,8 +91,8 @@ console.log(date.toUTCString());//Sat, 04 Mar 2023 22:00:00 GMT
 
 String Algorithm : If the hint is string , the order is reversed compared to the number algorithm. It calls the non-primitive toString() function first, and if it gets a string representation, it'll just use it; otherwise, it'll try the valueOf() method to see if the object has any primitive value.
 
-  - ToString():This abstract operation takes any value and converts it to a representation of the value in string form.
-  - If we call ToString(Object) it's going to invoke ToPrimitive() with the String hint (call toString() first and then it's going to call valueOf()).
+   - ToString():This abstract operation takes any value and converts it to a representation of the value in string form.
+   - If we call ToString(Object) it's going to invoke ToPrimitive() with the String hint (call toString() first and then it's going to call valueOf()).
     
     - null     ==>          "null"
     - undefined  ==>        "undefined"
@@ -111,8 +111,8 @@ String Algorithm : If the hint is string , the order is reversed compared to the
     - {toString(){return x}}  ==> "x"   //override toString()
       
 
-  - ToNumber() : will be invoked to convert it to a value of type number.
-  -  If we call ToNumber(Object) it's going to invoke ToPrimitive() with the Number hint (call valueOf() first and then it's going to call toString()).
+   - ToNumber() : will be invoked to convert it to a value of type number.
+   -  If we call ToNumber(Object) it's going to invoke ToPrimitive() with the Number hint (call valueOf() first and then it's going to call toString()).
      - ""   ==>    0
      - "0"   ==>   0
      - "-0"  ==>   -0
@@ -138,7 +138,7 @@ String Algorithm : If the hint is string , the order is reversed compared to the
    - {valueOf(){return 3} ==> 3
 
     
-- ToBoolean():  is called to convert an argument to a Boolean type whenever we use a value that is not Boolean in a place that needs a Boolean
+ - ToBoolean():  is called to convert an argument to a Boolean type whenever we use a value that is not Boolean in a place that needs a Boolean
     - Falsy ( " ",0,-0,null,NaN,false,undefined)
     - Truthy ( "foo",23,{a:1},[1,2,3],true,function(){...})
 - Corner Cases of Coersion
