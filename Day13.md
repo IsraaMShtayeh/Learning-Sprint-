@@ -65,9 +65,53 @@ z();//ReferenceError: z is not defined
 
 
 
-### []()
+### [SECTION'S EXERCISES](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%203/tasks.md)
 
 #### My Solution
+Q1:
+```javascript
+function sum(x){
+    return (function f(y){
+        console.log(y);
+    },5);
+}
+
+const exampleNormalFunc1 = (a, b, c) => {
+  return a * (b + c);
+}
+
+const exampleNormalFunc2 = (x, y) => {
+  return x * y;
+}
+
+const exampleNormalFunc3 = (string) => {
+  return string + " " + string + " " + string + "!";
+}
+
+
+const arrowHOF = (normalFunc) => {
+   
+//return normalFunc;
+return (...param)=>{
+let r=normalFunc(...param);
+    return (count=1)=>{
+        let result="";
+        for(let i=0;i<count;i++){
+            result=result+" "+r;
+        }
+        return result;
+    }
+};
+}
+
+const hofNormalFunc1 = arrowHOF(exampleNormalFunc1);
+const hofNormalFunc2 = arrowHOF(exampleNormalFunc2);
+const hofNormalFunc3 = arrowHOF(exampleNormalFunc3);
+
+console.log(hofNormalFunc1(3, 4, 5)(2)); // logs 27 twice
+console.log(hofNormalFunc2(20, 35)(4)); // logs 700 four times
+console.log(hofNormalFunc3("Meow")()); // logs "Meow Meow Meow!" once
+```
 
 
 ```javascript
