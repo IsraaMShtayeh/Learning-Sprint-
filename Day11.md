@@ -142,6 +142,7 @@ String Algorithm : If the hint is string , the order is reversed compared to the
     - Falsy ( " ",0,-0,null,NaN,false,undefined)
     - Truthy ( "foo",23,{a:1},[1,2,3],true,function(){...})
 - Corner Cases of Coersion
+  
   ```javascript
 console.log(Number(""));//0
 console.log(Number("\t\n"));//0
