@@ -116,12 +116,15 @@ in this case, I'm not trying to reassign the array so I get no error but I am ac
   var student="Israa";
   var teacher="Kyle";
   ```
-  Example2:
-  ```javascript
-  x=6;//TDZ error 
+  
+Example2:
+ ```javascript
+x=6;//TDZ error 
 let x=5;
 console.log(x);
-  ```
+ ```
+
+
 Example3:
 ```javascript
 var x=6;
