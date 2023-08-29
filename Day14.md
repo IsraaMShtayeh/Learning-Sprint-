@@ -28,12 +28,12 @@ fun2();  // Frank
 
 - Function Scope
 Ex1:  
-  ```javascript
+```javascript
 var teacher="kyle";
 console.log(teacher) ;//Kyle
 var teacher="Frank";
 console.log(teacher) ;//Frank
-  ```
+```
 Ex2: 
 ```javascript
 function fun(){
