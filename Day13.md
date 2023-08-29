@@ -113,8 +113,26 @@ console.log(hofNormalFunc2(20, 35)(4)); // logs 700 four times
 console.log(hofNormalFunc3("Meow")()); // logs "Meow Meow Meow!" once
 ```
 
-
+Q2:
 ```javascript
+
+// Example object
+const obj = {
+  name: 'John',
+  greet: function (greeting) {
+    console.log(`${greeting}, ${this.name}!`);
+  }
+};
+
+const preserveThis = (func) => {
+return func.bind(obj);
+}
+
+// Wrap the greet function using preserveThis
+const preservedGreet = preserveThis(obj.greet);
+
+// Call the wrapped function as a method of the object
+preservedGreet('Hello'); // Output: "Hello, John!"
 
 
 ```
