@@ -42,10 +42,10 @@ Ex2:
   var x=6;
   console.log(x);//
 }
-  console.log(x);//null
-  fun();//6
 console.log(x);//null
-  ```
+fun();//6
+console.log(x);//null
+```
 Ex3: 
 ```javascript
 var x=5;
@@ -57,7 +57,7 @@ function fun(){
   fun();//6
     console.log(x);//5
 ```
-- IIFE Pattern
+IIFE Pattern
   
   Ex1:
   ```javascript
