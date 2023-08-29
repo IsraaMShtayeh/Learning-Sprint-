@@ -60,17 +60,18 @@ function fun(){
 - IIFE Pattern
   
   Ex1:
-  
   ```javascript
-    var x=5;
+  var x=5;
 (function fun(){
   var x=6;
   console.log(x);//6
 })();
   console.log(x);//5
   // output 6 5 
-  ```
+   ```
+
 Ex2:
+
 ```javascript
 (function fun(str){
   console.log(str);//Hello
