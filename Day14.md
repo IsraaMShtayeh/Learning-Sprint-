@@ -107,7 +107,10 @@ console.log(x);//Hello
   ```
 in this case, I'm not trying to reassign the array so I get no error but I am actually still mutating the value which is totally allowed.
 - Hoisting: it moved the function first and then it moved the variable declaration and then it  executed.
-  Example1:
+
+
+
+   Example1:
   ```javascript
   console.log(student,teacher);//undefined undefined 
   var student="Israa";
