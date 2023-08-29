@@ -58,6 +58,7 @@ function fun(){
     console.log(x);//5
 ```
 - IIFE Pattern
+  
   Ex1:
   
   ```javascript
@@ -68,7 +69,6 @@ function fun(){
 })();
   console.log(x);//5
   // output 6 5 
- 
   ```
 Ex2:
 ```javascript
