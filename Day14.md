@@ -171,7 +171,7 @@ The number variable is in a temporal dead zone where JavaScript knows of its exi
 
 ## Coding Exercises
 
-### []()
+### [SECTION'S EXERCISES](https://github.com/orjwan-alrajaby/gsg-QA-Nablus-training-2023/blob/main/learning-sprint-1/week3%20-%20deep-javascript-foundations-v3/day%204/tasks.md)
 
 #### My Solution
 
