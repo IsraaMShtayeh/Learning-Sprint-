@@ -27,23 +27,25 @@ fun2();  // Frank
 - Lexical scope determined at compile time.
 
 - Function Scope
-Ex1:  
+Ex1:
+
 ```javascript
 var teacher="kyle";
 console.log(teacher) ;//Kyle
 var teacher="Frank";
 console.log(teacher) ;//Frank
 ```
+
 Ex2: 
 ```javascript
-function fun(){
+ function fun(){
   var x=6;
   console.log(x);//
 }
   console.log(x);//null
   fun();//6
-    console.log(x);//null
-```
+console.log(x);//null
+  ```
 Ex3: 
 ```javascript
 var x=5;
@@ -57,17 +59,16 @@ function fun(){
 ```
 - IIFE Pattern
   Ex1:
+  
   ```javascript
     var x=5;
 (function fun(){
   var x=6;
   console.log(x);//6
 })();
-  console.log(x);//6
-  /*
-  6
-  5
-  */
+  console.log(x);//5
+  // output 6 5 
+ 
   ```
 Ex2:
 ```javascript
