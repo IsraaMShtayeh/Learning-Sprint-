@@ -167,7 +167,35 @@ The number variable is in a temporal dead zone where JavaScript knows of its exi
 
 #### My Solution
 
+Q1:
+```javascript
+for (let i = 0; i < 5; i++) {
+    setTimeout(function() {
+      console.log("value of [i] is: ", i);
+    }, 100);
+}
+```
+Q2:
+```javascript
+let   array = [];
+for (let i = 0; i < 5; i++) {
 
+   array.push(i);
+}
+   console.log("Current array is: ", array)
+
+
+```
+Q3:
 ```javascript
 
+let functions = [];
+
+for (let i = 0; i < 5; i++) {
+  functions.push(() => {
+    console.log("Current value of i is:", i);
+  });
+}
+
+functions.forEach((func) => func());
 ```
