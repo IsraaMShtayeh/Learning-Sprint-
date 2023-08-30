@@ -136,3 +136,27 @@ preservedGreet('Hello'); // Output: "Hello, John!"
 
 
 ```
+Q3:
+Example 1
+```javascript
+function outer1() {
+  var x = 10;
+
+  var inner1 = function() {
+    console.log(x);
+  };
+
+  inner1();
+}
+
+outer1(); // Output: 10
+// x function scope so i can access it from the inner function 
+```
+
+Example2:
+```javascript
+
+
+
+
+```
