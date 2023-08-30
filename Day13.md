@@ -155,7 +155,20 @@ outer1(); // Output: 10
 
 Example2:
 ```javascript
+function outer2() {
+  var x = 10;
 
+  var inner2 = function() {
+    var x = 20;
+    console.log(x);
+  };
+
+  inner2();
+}
+
+outer2(); // Output: 20
+
+// var is function scope i declare another var in inner2 function different from the outer one 
 
 
 
