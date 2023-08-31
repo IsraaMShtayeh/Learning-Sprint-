@@ -94,7 +94,29 @@ Object.freeze(obj);// Make Object Immutable
 obj.z=5;//undefined
 
 ```
+Copy Object 
+```javascript
+const user= { name: 'Israa', language: 'Arabic' }
 
+
+// "Spread"
+const user1 ={ ...user }
+user1.name="sara";
+
+// "Object.assign"
+const user2=Object.assign({}, user)
+user2.name="lama";
+
+// "JSON"
+const user3=JSON.parse(JSON.stringify(user))
+user3.name="marah";
+
+console.log(user);
+console.log(user1);
+console.log(user2);
+console.log(user3);
+
+```
 
 
 ## Coding Exercises
