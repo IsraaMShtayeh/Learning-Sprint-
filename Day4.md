@@ -106,8 +106,65 @@ console.log(x);//7
 test();
 console.log(x);//6
 
+```
+```javascript
+function varScoping() {
+  var x = 1;
+
+  if (true) {
+    var x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 2
+}
+
+function letScoping() {
+  let x = 1;
+
+  if (true) {
+    let x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 1
+}
+
 
 ```
+```javascript
+function varAndLetScoping() {
+  var x = 1;
+
+  if (true) {
+    let x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 1
+}
+```
+
+```javascript
+function nestedScopeTest() {
+  if (true) {
+    var functionVariable = 1;
+    let blockVariable = 2;
+
+    console.log(functionVariable); // will print 1
+    console.log(blockVariable); // will print 2
+
+    if (true) {
+      console.log(functionVariable); // will print 1
+      console.log(blockVariable); // will print 2
+    }
+  }
+
+  console.log(functionVariable); // will print 1
+  console.log(blockVariable); // will throw an error
+}
+```
+
 ```html
 Example 4 : Events and handling
 //html Code 
