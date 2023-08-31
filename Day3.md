@@ -86,13 +86,29 @@ user.speak();//My name is  Israa
 
 Notes
 ```javascript
+// creating an object constructor and assigning values to it 
+const obj1 = { property1: 'initial_data' };
+  
+// creating a second object which will freeze
+// the properties of the first object
+const obj2 = Object.freeze(obj1);
+  
+// Updating the properties of the frozen object
+obj2.property1 = 'new_data';
+ obj2.name="israa";
+// Displaying the properties of the  frozen object 
+console.log(obj2.property1);
+console.log(obj2.name);
+
+```
+```javascript
 const obj={
 x:1,
 y:2,
 }
 Object.freeze(obj);// Make Object Immutable 
-obj.z=5;//undefined
-
+obj.z=5;
+console.log(obj.z);//undefined
 ```
 Copy Object 
 ```javascript
