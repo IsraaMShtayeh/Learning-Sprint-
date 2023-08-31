@@ -69,6 +69,8 @@ const user2 = userCreator("Tim", 5);
 user1.increment();
 console.log(user1.score);//4
 ```
+
+- this value inside a regular function is dynamic and depends on the invocation. But this inside the arrow function is bound lexically and equals to this of the outer function.
 - new (create and return the object automatically)
 ```javascript
 function userCreator(name, score) {
@@ -148,7 +150,11 @@ const user=userCreator("Israa",6);
 user.increment();
 console.log(user.score);//7
 ```
+```javascript
 
+
+
+```
 
 ## Coding Exercises
 
